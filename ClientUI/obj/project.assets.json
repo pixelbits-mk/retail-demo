@@ -1,0 +1,424 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NServiceBus/7.1.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Security",
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net452/NServiceBus.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NServiceBus.Core.dll": {}
+        }
+      },
+      "NServiceBus.Persistence.Sql/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NServiceBus": "[7.0.0, 8.0.0)",
+          "Newtonsoft.Json": "[12.0.1, 13.0.0)",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/net452/NServiceBus.Persistence.Sql.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NServiceBus.Persistence.Sql.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "NServiceBus.SqlServer/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NServiceBus": "[7.0.0, 8.0.0)",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/net452/NServiceBus.Transport.SqlServer.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NServiceBus.Transport.SqlServer.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.4.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "Messages/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "NServiceBus": "7.0.0",
+          "NServiceBus.Persistence.Sql": "4.4.0",
+          "NServiceBus.SqlServer": "4.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Messages.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Messages.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win7-x86": {
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NServiceBus/7.1.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Security",
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net452/NServiceBus.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NServiceBus.Core.dll": {}
+        }
+      },
+      "NServiceBus.Persistence.Sql/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NServiceBus": "[7.0.0, 8.0.0)",
+          "Newtonsoft.Json": "[12.0.1, 13.0.0)",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/net452/NServiceBus.Persistence.Sql.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NServiceBus.Persistence.Sql.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "NServiceBus.SqlServer/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NServiceBus": "[7.0.0, 8.0.0)",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/net452/NServiceBus.Transport.SqlServer.dll": {}
+        },
+        "runtime": {
+          "lib/net452/NServiceBus.Transport.SqlServer.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.4.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "Messages/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "NServiceBus": "7.0.0",
+          "NServiceBus.Persistence.Sql": "4.4.0",
+          "NServiceBus.SqlServer": "4.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Messages.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Messages.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "NServiceBus/7.1.6": {
+      "sha512": "2ExEjVqsXomlYI3X52IrrGXn7yhr578Lni+jC1D/pmAdkun0pfaqITSRsLHcT07cnHrSu+JZAgsLeTQ/0j+GtA==",
+      "type": "package",
+      "path": "nservicebus/7.1.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/NServiceBus.Core.Analyzer.dll",
+        "lib/net452/NServiceBus.Core.dll",
+        "lib/net452/NServiceBus.Core.pdb",
+        "lib/net452/NServiceBus.Core.xml",
+        "lib/netstandard2.0/NServiceBus.Core.dll",
+        "lib/netstandard2.0/NServiceBus.Core.pdb",
+        "lib/netstandard2.0/NServiceBus.Core.xml",
+        "nservicebus.7.1.6.nupkg.sha512",
+        "nservicebus.nuspec",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "NServiceBus.Persistence.Sql/4.4.0": {
+      "sha512": "KXBAx1/v2hDUqpxuy4/x7xAvMedIEMIAqCgik5y7UhLa+Aw7xnmSt23RrJbf7srelE2iZpiVQv7qbCVrMv59nQ==",
+      "type": "package",
+      "path": "nservicebus.persistence.sql/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/NServiceBus.Persistence.Sql.targets",
+        "lib/net452/NServiceBus.Persistence.Sql.dll",
+        "lib/net452/NServiceBus.Persistence.Sql.pdb",
+        "lib/net452/NServiceBus.Persistence.Sql.xml",
+        "lib/netstandard2.0/NServiceBus.Persistence.Sql.dll",
+        "lib/netstandard2.0/NServiceBus.Persistence.Sql.pdb",
+        "lib/netstandard2.0/NServiceBus.Persistence.Sql.xml",
+        "netclassic/NServiceBus.Persistence.Sql.ScriptBuilderTask.dll",
+        "netclassic/NServiceBus.Persistence.Sql.ScriptBuilderTask.pdb",
+        "netstandard/NServiceBus.Persistence.Sql.ScriptBuilderTask.dll",
+        "netstandard/NServiceBus.Persistence.Sql.ScriptBuilderTask.pdb",
+        "nservicebus.persistence.sql.4.4.0.nupkg.sha512",
+        "nservicebus.persistence.sql.nuspec"
+      ]
+    },
+    "NServiceBus.SqlServer/4.1.0": {
+      "sha512": "DYrZsiDyfQl3bcaWJJBp37+v8aJp5SRcE6OKUZFCbfDBu9ClaPBXS6wagMxPAgyCwIgaPM6g654hDtGhM7REjw==",
+      "type": "package",
+      "path": "nservicebus.sqlserver/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/NServiceBus.Transport.SqlServer.dll",
+        "lib/net452/NServiceBus.Transport.SqlServer.pdb",
+        "lib/net452/NServiceBus.Transport.SqlServer.xml",
+        "lib/netstandard2.0/NServiceBus.Transport.SqlServer.dll",
+        "lib/netstandard2.0/NServiceBus.Transport.SqlServer.pdb",
+        "lib/netstandard2.0/NServiceBus.Transport.SqlServer.xml",
+        "nservicebus.sqlserver.4.1.0.nupkg.sha512",
+        "nservicebus.sqlserver.nuspec"
+      ]
+    },
+    "System.Data.SqlClient/4.4.3": {
+      "sha512": "NvG/0mC80diO0zXYt89gFC869Gn6aIn5Tx0HavxGa3IPbH2Ktflbw2HJvl24zmpAL0UF/bkGsI+jv0/aHX8dJw==",
+      "type": "package",
+      "path": "system.data.sqlclient/4.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.SqlClient.dll",
+        "lib/net46/System.Data.SqlClient.dll",
+        "lib/net461/System.Data.SqlClient.dll",
+        "lib/netstandard1.2/System.Data.SqlClient.dll",
+        "lib/netstandard1.3/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.SqlClient.dll",
+        "ref/net46/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/System.Data.SqlClient.dll",
+        "ref/netstandard1.2/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/System.Data.SqlClient.dll",
+        "ref/netstandard1.3/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard2.0/System.Data.SqlClient.dll",
+        "ref/netstandard2.0/System.Data.SqlClient.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "system.data.sqlclient.4.4.3.nupkg.sha512",
+        "system.data.sqlclient.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Messages/1.0.0": {
+      "type": "project",
+      "path": "../Messages/Messages.csproj",
+      "msbuildProject": "../Messages/Messages.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "Messages >= 1.0.0",
+      "NServiceBus >= 7.*"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\michael.kang\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\projects\\SagaDemo\\ClientUI\\ClientUI.csproj",
+      "projectName": "ClientUI",
+      "projectPath": "E:\\projects\\SagaDemo\\ClientUI\\ClientUI.csproj",
+      "packagesPath": "C:\\Users\\michael.kang\\.nuget\\packages\\",
+      "outputPath": "E:\\projects\\SagaDemo\\ClientUI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "E:\\projects\\SagaDemo\\NuGet.Config",
+        "C:\\Users\\michael.kang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/particular/": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "E:\\projects\\SagaDemo\\Messages\\Messages.csproj": {
+              "projectPath": "E:\\projects\\SagaDemo\\Messages\\Messages.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "NServiceBus": {
+            "target": "Package",
+            "version": "[7.*, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
+      }
+    }
+  }
+}
